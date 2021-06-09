@@ -6,8 +6,11 @@ API pwa regex
 2. Criar Mongo DB
 
 
-# Postman documentation
-https://documenter.getpostman.com/view/3754041/SW7exkHe?version=latest
+### GitHub repo
+https://github.com/AndreMacielSousa/heroku-pwa
+
+### HEROKU Dist
+https://pwa-regex.herokuapp.com/
 
 
 ## Project setup
