@@ -31,6 +31,8 @@ https://github.com/AndreMacielSousa/UAbALL
 3. Back-End
 ```
 
+API https://pwa-regex.herokuapp.com/ 
+
 ## Project setup
 
 Cada pasta incluirá respectivas intruções.
