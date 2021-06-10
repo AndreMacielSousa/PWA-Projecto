@@ -1,5 +1,3 @@
-# regex
-
 ## Project setup
 ```
 npm install

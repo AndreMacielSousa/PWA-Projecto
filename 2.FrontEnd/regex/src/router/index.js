@@ -1,24 +1,52 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "home",
+    component: () => import("@/views/Home.vue"),
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    path: "/login",
+    name: "login",
+    component: () => import("@/views/Login.vue"),
   },
+  {
+    path: "/register",
+    name: "register",
+    component: () => import("@/views/Register.vue"),
+  },
+  {
+    path: "/admin",
+    name: "admin",
+    component: () => import("@/views/Admin.vue"),
+  },
+
+  {
+    path: "/admin/users",
+    name: "listUsers",
+    component: () => import("@/views/users/ListUsers.vue"),
+  },
+  
+  {
+    path: "/admin/users/add",
+    name: "addUser",
+    component: () => import("@/views/users/AddUser.vue"),
+  },
+  {
+    path: "/admin/users/:userId",
+    name: "editUser",
+    component: () => import("@/views/users/EditUser.vue"),
+  },
+
+  // Redirect to 404 page, if no match found
+  {
+    path: "*",
+    component: () => import("@/views/Error404.vue"),
+  }
 ];
 
 const router = new VueRouter({
