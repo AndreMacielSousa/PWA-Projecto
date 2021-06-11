@@ -38,3 +38,9 @@ API https://pwa-regex.herokuapp.com/
 Cada pasta incluirá respectivas intruções.
 
 
+### Nota Final
+```
+Projecto não concluido:
+1. Falta adpatar front End
+2. Falta Adaptar base de dados
+```
