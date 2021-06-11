@@ -1,28 +1,26 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark">
-      <b-navbar-brand href="#" class="ml-5">
-        <router-link
-          :to="{ name: 'home' }"
-          tag="img"
-          :src="require('@/assets/animalec_line.png')"
-          style="width:250px; height:50px"
-          title="Página principal do Animalec"
-        />
-      </b-navbar-brand>
 
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+<ul id="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">DFA</a></li>
+                <li><a href="#">NFA</a></li>
+                <li><a href="#">NFA-ε</a></li>
+                <li><a href="#">PDA</a></li>
+                <li><a href="#">TURING</a></li>
+                <li><a href="#">REGEX</a></li>
+                <li><a href="#">GRAMMAR</a></li>
+                <li class="esp"><a href="#"></a></li>
+                <li class="eng"><a href="#"></a></li>
+                <li class="prt"><a href="#"></a></li>
+                <li class="sos"><a href="#">help</a></li>
+            </ul>
 
       <b-collapse id="nav-collapse" is-nav>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto mr-5">
-          <b-nav-item :to="{ name: 'animals' }" :disabled="!isUserLoggedIn"
-            >ANIMAIS</b-nav-item
-          >
-          <b-nav-item :to="{ name: 'quizzes' }" :disabled="!isUserLoggedIn"
-            >QUIZZES</b-nav-item
-          >
-          <b-nav-item to="#contacts">CONTACTOS</b-nav-item>
+
           <div v-if="isUserLoggedIn">
             <div v-if="getUserType === 'user'">
               <b-nav-item :to="{ name: 'profile' }">
